@@ -10,7 +10,7 @@
 
 		<startEvent id="startEvent" />
 
-		<serviceTask id="service" activiti:expression="#{testBean}" />
+		<serviceTask id="service" activiti:expression="#{example.test()}" />
 
 		<endEvent id="endEvent" />
 

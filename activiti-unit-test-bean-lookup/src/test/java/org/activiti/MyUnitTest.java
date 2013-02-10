@@ -1,10 +1,8 @@
 package org.activiti;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.activiti.engine.runtime.ProcessInstance;
-import org.activiti.engine.task.Task;
 import org.activiti.engine.test.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.junit.Test;
@@ -20,10 +18,6 @@ public class MyUnitTest extends AbstractCdiTestClass {
 		ProcessInstance processInstance = runtimeService
 				.startProcessInstanceByKey("my-process");
 		assertNotNull(processInstance);
-
-		Task task = activitiRule.getTaskService().createTaskQuery()
-				.singleResult();
-		assertEquals("Activiti is awesome!", task.getName());
 	}
 
 }
