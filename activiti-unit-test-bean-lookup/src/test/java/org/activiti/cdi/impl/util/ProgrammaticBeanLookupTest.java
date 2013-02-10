@@ -18,7 +18,8 @@ public class ProgrammaticBeanLookupTest extends AbstractCdiTestClass {
 
 	@Test
 	public void testLookup() {
-		Object lookup = ProgrammaticBeanLookup.lookup("example", manager);
-		assertThat(lookup, is(instanceOf(AlternativeBean.class)));
+		//50/50 chance that this test will crash
+			Object lookup = ProgrammaticBeanLookup.lookup("example", manager);
+			assertThat(lookup, is(instanceOf(AlternativeBean.class)));
 	}
 }
